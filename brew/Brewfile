@@ -7,6 +7,8 @@ brew "jq"
 brew "mas"
 brew "node"
 brew "starship"
+
+cask "iterm2"
 cask "visual-studio-code"
 
 mas "1Password 7", id: 1333542190
