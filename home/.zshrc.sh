@@ -17,11 +17,3 @@ fi
 
 # Register directory
 hash -d dev="$dev"
-
-# Prompt customization
-autoload -U colors && colors
-autoload -Uz vcs_info
-precmd() { vcs_info }
-zstyle ':vcs_info:git:*' formats '(%b) '
-setopt PROMPT_SUBST
-PROMPT='%K{13}%~%k %F{yello}${vcs_info_msg_0_}%f%% '
