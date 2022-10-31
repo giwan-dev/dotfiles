@@ -1,0 +1,76 @@
+[user]
+  name = giwan
+  email = giwan.dev@gmail.com
+
+[alias]
+  a = add
+
+  b = branch
+
+  chp = cherry-pick
+  chpc = chp --continue
+  chpa = chp --abort
+
+  cl = clone
+
+  c = commit
+  cf = c --no-verify # 커밋 훅을 작동시키지 않고 커밋합니다.
+  override = commit --amend -C HEAD
+
+  d = diff
+  dsum = d --compact-summary # 현재 변경 내역의 요약 정보를 확인합니다.
+
+  l = log
+
+  m = merge
+  mc = m --continue
+  ma = m --abort
+
+  pl = pull
+  pla = pl --all -p # 등록된 모든 리모트를 fetch하고, 리모트에서 지워진 브랜치를 로컬에서 제거합니다.
+
+  ps = push
+  psf = ps -f
+
+  r = rebase
+  ri = r -i
+  rc = r --continue
+  ra = r --abort
+  rs = r --skip
+  ret = r --edit-todo
+
+  rs = restore
+  discard = restore -- . # 현재 작업 중인 내용을 모두 제거합니다.
+
+  rvt = revert
+
+  sh = stash
+  shp = sh pop
+  shcl = sh clear
+
+  sw = switch
+
+[core]
+  editor = vim
+  excludesfile = ~/.gitignore
+
+[format]
+  pretty = %Cred%h%Creset%C(yellow)%d%Creset %C(blue)%an%Creset %C(dim)%cr\n%B
+
+[log]
+  abbrevCommit = true
+
+[rebase]
+  missingCommitsCheck = error
+
+[pull]
+  rebase = true
+
+[advice]
+  statusHints = false
+
+[init]
+  defaultBranch = main
+
+[github]
+  user = giwan-dev
