@@ -17,3 +17,7 @@ fi
 
 # Register directory
 hash -d dev="$dev"
+
+if [[ "$OSTYPE" == darwin* ]]; then
+  eval "$(starship init zsh)"
+fi
