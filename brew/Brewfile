@@ -9,6 +9,7 @@ brew "node"
 brew "starship"
 
 cask "iterm2"
+cask "notion"
 cask "visual-studio-code"
 
 mas "1Password 7", id: 1333542190
