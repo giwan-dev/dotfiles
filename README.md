@@ -12,3 +12,9 @@ git clone git@github.com:giwan-dev/dotfiles.git --recursive
 ```sh
 source ./scripts/symlink-dotfiles.sh
 ```
+
+macOS를 설정하는 중이라면, HomeBrew 번들을 설치합니다.
+
+```sh
+source ./brew/setup.sh
+```

@@ -1,0 +1,17 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+
+brew "cask"
+brew "jq"
+brew "mas"
+brew "node"
+brew "starship"
+cask "visual-studio-code"
+
+mas "1Password 7", id: 1333542190
+mas "Amphetamine", id: 937984704
+mas "Keynote", id: 409183694
+mas "Pages", id: 409201541
+mas "Xcode", id: 497799835
+mas "카카오톡", id: 869223134
