@@ -4,6 +4,7 @@ dev="$HOME/Developer"
 terminal="$HOME/dotfiles/terminal"
 
 source "$terminal/highlight/setup.sh"
+source "$terminal/completion/setup.sh"
 
 alias cl="clear"
 alias permission="sudo chown -R $USER"
