@@ -9,6 +9,7 @@ brew "node"
 brew "starship"
 
 cask "google-chrome"
+cask "iglance"
 cask "iterm2"
 cask "notion"
 cask "spotify"
