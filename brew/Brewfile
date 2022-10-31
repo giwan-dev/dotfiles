@@ -8,6 +8,7 @@ brew "mas"
 brew "node"
 brew "starship"
 
+cask "1password"
 cask "google-chrome"
 cask "iglance"
 cask "iterm2"
