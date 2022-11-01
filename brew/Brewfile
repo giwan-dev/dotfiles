@@ -5,7 +5,6 @@ tap "homebrew/core"
 brew "cask"
 brew "jq"
 brew "mas"
-brew "node"
 brew "starship"
 
 cask "1password"
