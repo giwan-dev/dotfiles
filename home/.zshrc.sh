@@ -9,7 +9,7 @@ source "$terminal/completion/setup.sh"
 alias cl="clear"
 alias permission="sudo chown -R $USER"
 alias g="git"
-alias ls="ls --color=auto"
+alias ls="exa"
 alias l="ls -al"
 
 if [[ "$OSTYPE" == darwin* ]]; then
