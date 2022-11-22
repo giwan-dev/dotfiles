@@ -9,8 +9,6 @@ source "$terminal/completion/setup.sh"
 alias cl="clear"
 alias permission="sudo chown -R $USER"
 alias g="git"
-alias ls="exa"
-alias l="ls -al"
 
 if [[ "$OSTYPE" == darwin* ]]; then
   alias g-br-clear="git br -vv | grep gone | sed | cut -f 3 -d ' ' | xargs -n 1 git br -D"
@@ -27,3 +25,9 @@ export NVM_DIR="$HOME/.nvm"
 if [[ "$OSTYPE" == darwin* ]]; then
   eval "$(starship init zsh)"
 fi
+
+# exa config
+TIME_STYLE="iso"
+export TIME_STYLE
+alias ls="exa"
+alias l="exa --header --long --all"
