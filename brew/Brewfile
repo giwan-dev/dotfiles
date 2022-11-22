@@ -3,6 +3,7 @@ tap "homebrew/cask"
 tap "homebrew/core"
 
 brew "cask"
+brew "exa"
 brew "jq"
 brew "mas"
 brew "starship"
