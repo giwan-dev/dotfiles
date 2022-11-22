@@ -8,7 +8,7 @@ brew "mas"
 brew "starship"
 
 cask "1password"
-cask "google-chrome"
+cask "firefox"
 cask "iglance"
 cask "iterm2"
 cask "karabiner-elements"
