@@ -36,3 +36,6 @@ Thumbs.db
 # Node.js package manager related
 /node_modules
 /npm-debug.log
+
+# git
+*.bundle
