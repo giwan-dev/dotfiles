@@ -11,7 +11,7 @@ alias permission="sudo chown -R $USER"
 alias g="git"
 
 if [[ "$OSTYPE" == darwin* ]]; then
-  alias g-br-clear="git br -vv | grep gone | sed | cut -f 3 -d ' ' | xargs -n 1 git br -D"
+  alias g-br-clear="git branch -vv | grep gone | sed | cut -f 3 -d ' ' | xargs -n 1 git branch -D"
 fi
 
 # Register directory
