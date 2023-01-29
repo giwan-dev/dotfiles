@@ -17,6 +17,7 @@ cask "notion"
 cask "rectangle"
 cask "spotify"
 cask "visual-studio-code"
+cask "gifski"
 
 mas "Amphetamine", id: 937984704
 mas "Keynote", id: 409183694
