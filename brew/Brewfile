@@ -15,11 +15,9 @@ cask "iterm2"
 cask "karabiner-elements"
 cask "notion"
 cask "rectangle"
-cask "spotify"
 cask "visual-studio-code"
 cask "gifski"
 
 mas "Amphetamine", id: 937984704
 mas "Keynote", id: 409183694
 mas "Pages", id: 409201541
-mas "카카오톡", id: 869223134
