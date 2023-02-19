@@ -8,15 +8,7 @@ link() {
   ln -s "$from" "$to"
 }
 
-dotfiles="$HOME/dotfiles"
-dotfiles_container="$dotfiles/home"
-
-if [ -d "$dotfiles" ]; then
-  echo "Symlinking dotfiles from $dotfiles"
-else
-  echo "$dotfiles does not exist"
-  exit 1
-fi
+dotfiles_container="$HOME/dotfiles/home"
 
 for location in $(find $dotfiles_container -name '.*'); do
   file="${location##*/}"
