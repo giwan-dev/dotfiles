@@ -16,5 +16,5 @@ git clone git@github.com:giwan-dev/dotfiles.git --recursive
 ```
 
 ```sh
-./init.sh
+~/dotfiles/init.sh
 ```
