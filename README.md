@@ -24,3 +24,7 @@ git clone git@github.com:giwan-dev/dotfiles.git --recursive
 ```sh
 ~/dotfiles/init.sh
 ```
+
+### 설치가 필요한 것
+
+- [D2Coding font](https://github.com/naver/d2codingfont#%EB%8B%A4%EC%9A%B4%EB%A1%9C%EB%93%9C)
