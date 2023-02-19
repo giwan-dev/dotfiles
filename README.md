@@ -17,6 +17,10 @@ git clone git@github.com:giwan-dev/dotfiles.git --recursive
 
 [Homebrew](https://brew.sh)를 설치하세요.
 
+[nvm](https://github.com/nvm-sh/nvm#install--update-script)을 설치하세요.
+
+스크립트를 실행하세요.
+
 ```sh
 ~/dotfiles/init.sh
 ```
