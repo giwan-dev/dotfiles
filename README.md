@@ -15,6 +15,8 @@ xcode-select --install
 git clone git@github.com:giwan-dev/dotfiles.git --recursive
 ```
 
+[Homebrew](https://brew.sh)를 설치하세요.
+
 ```sh
 ~/dotfiles/init.sh
 ```
