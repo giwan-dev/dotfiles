@@ -9,7 +9,7 @@ link() {
 }
 
 dotfiles="$HOME/dotfiles"
-dotfiles_container="home"
+dotfiles_container="$dotfiles/home"
 
 if [ -d "$dotfiles" ]; then
   echo "Symlinking dotfiles from $dotfiles"
@@ -21,5 +21,5 @@ fi
 for location in $(find $dotfiles_container -name '.*'); do
   file="${location##*/}"
   file="${file%.sh}"
-  link "$dotfiles/$location" "$HOME/$file"
+  link $location "$HOME/$file"
 done

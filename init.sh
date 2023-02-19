@@ -3,8 +3,10 @@
 echo "Install nvm..."
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 
-source ./scripts/symlink-dotfiles.sh
+ROOT_DIR="$HOME/dotfiles"
+
+source "$ROOT_DIR/scripts/symlink-dotfiles.sh"
 
 if [[ "$OSTYPE" == darwin* ]]; then
-  source ./brew/setup.sh
+  source "$ROOT_DIR/brew/setup.sh"
 fi
