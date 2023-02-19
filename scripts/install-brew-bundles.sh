@@ -1,8 +1,8 @@
 #!/bin/sh
 
-brewfile_container="$HOME/dotfiles/brew"
+brewfile_container="$HOME/dotfiles/Brewfiles"
 
-for brewfile in $(find $brewfile_container -name 'Brewfile*'); do
+for brewfile in $(find $brewfile_container -name '*.rb'); do
   file_name="${brewfile##*/}"
   echo $file_name
 

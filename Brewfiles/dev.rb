@@ -1,0 +1,7 @@
+brew "exa"
+brew "jq"
+brew "starship"
+brew "gifski"
+cask "iterm2"
+cask "visual-studio-code"
+cask "karabiner-elements"
