@@ -1,4 +1,5 @@
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool "false" # VSCode Vim 바인딩 연속 입력 되도록 처리
+defaults write co.zeit.hyper ApplePressAndHoldEnabled -bool "false"        # hyper 연속 입력 활성화
 defaults write com.apple.dock "autohide" -bool "true"                      # Dock 자동 숨김
 defaults write com.apple.finder "_FXSortFoldersFirst" -bool "true"         # 디렉토리를 상단에 정렬
 
