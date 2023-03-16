@@ -44,6 +44,8 @@
 
   rvt = revert
 
+  s = show
+
   sh = stash
   shp = sh pop
   shcl = sh clear
