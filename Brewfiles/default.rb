@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 brew "cask"
 brew "mas"
+brew "less"
 cask "1password"
 cask "firefox"
 cask "notion"
