@@ -24,6 +24,8 @@ export TIME_STYLE
 alias ls="exa --header --long --all --color=always"
 alias l="ls"
 
+# less with color coding
+alias less="less -R"
 
 # nvm configurations
 export NVM_DIR="$HOME/.nvm"
