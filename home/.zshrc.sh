@@ -21,8 +21,9 @@ fi
 # exa config
 TIME_STYLE="iso"
 export TIME_STYLE
-alias ls="exa"
-alias l="exa --header --long --all"
+alias ls="exa --header --long --all --color=always"
+alias l="ls"
+
 
 # nvm configurations
 export NVM_DIR="$HOME/.nvm"
