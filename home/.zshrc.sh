@@ -27,15 +27,10 @@ alias ls="exa --header --long --all --color=always"
 alias less="less -RF"
 
 # 주어진 디렉토리에 ls 명령어를 수행하고 결과를 less로 표시하는 함수
-# 아무 값이 없으면 현재 디렉토리를 표시합니다.
+# 전달하는 옵션은 모두 exa에 전달합니다.
 function l {
- directory=$1
-
- if [[ -z $directory ]]; then
-   ls | less --header 1
- else
-   ls $1 | less --header 1
- fi
+  exa_options=$@
+  ls $exa_options | less --header 1
 }
 
 # nvm configurations
