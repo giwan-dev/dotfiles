@@ -1,4 +1,5 @@
 brew "exa"
+brew "bat"
 brew "jq"
 brew "starship"
 cask "hyper"
