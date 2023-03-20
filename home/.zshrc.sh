@@ -22,10 +22,21 @@ fi
 TIME_STYLE="iso"
 export TIME_STYLE
 alias ls="exa --header --long --all --color=always"
-alias l="ls"
 
-# less with color coding
-alias less="less -R"
+# less with color coding, quit when one screen
+alias less="less -RF"
+
+# 주어진 디렉토리에 ls 명령어를 수행하고 결과를 less로 표시하는 함수
+# 아무 값이 없으면 현재 디렉토리를 표시합니다.
+function l {
+ directory=$1
+
+ if [[ -z $directory ]]; then
+   ls | less --header 1
+ else
+   ls $1 | less --header 1
+ fi
+}
 
 # nvm configurations
 export NVM_DIR="$HOME/.nvm"
