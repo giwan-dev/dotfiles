@@ -45,7 +45,7 @@ function yield_port {
   if [[ -z $pid ]]; then
     echo "Port not in use"
   else
-    kill $pid
+    kill -QUIT $pid
     echo "Process using port $port has been terminated"
   fi
 }
