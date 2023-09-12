@@ -20,10 +20,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
   eval "$(starship init zsh)"
 fi
 
-# exa config
-TIME_STYLE="iso"
-export TIME_STYLE
-alias ls="exa --header --long --all --color=always"
+# eza config
+alias ls="eza --long --all --color=always"
 
 # less with color coding, quit when one screen
 alias less="less -RF"
@@ -31,8 +29,8 @@ alias less="less -RF"
 # 주어진 디렉토리에 ls 명령어를 수행하고 결과를 less로 표시하는 함수
 # 전달하는 옵션은 모두 exa에 전달합니다.
 function l {
-  exa_options=$@
-  ls $exa_options | less --header 1
+  eza_options=$@
+  ls $eza_options | less
 }
 
 # nvm configurations
