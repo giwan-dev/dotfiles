@@ -49,3 +49,9 @@ function yield_port {
     echo "Process using port $port has been terminated"
   fi
 }
+
+# base 브랜치로부터 변경 내역이 얼마나 많이 쌓였는지 확인하는 명령어
+function diff_with {
+  export CHECK_GIT_DIFF_LINE_THRESHOLD=600
+  "$HOME/dotfiles/scripts/check-git-diff.js" $1 $2
+}
