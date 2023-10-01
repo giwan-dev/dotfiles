@@ -16,28 +16,41 @@ main(args);
 /**
  * 첫 번째 파라미터는 비교할 base 브랜치
  * 두 번째 파라미터는 최소 라인 변경 수
+ * '--debug'는 더 많은 로그를 활성화
  */
 function parseArguments() {
-  const [, , ...args] = process.argv;
-  const base = args[0];
+  const [, , ...rawArgs] = process.argv;
+  const args = rawArgs.reduce((args, current) => {
+    if (current === "--debug") {
+      args.debug = true;
+    } else if (args.base === undefined) {
+      args.base = current;
+    } else if (args.linesThreshold === undefined) {
+      args.linesThreshold = current;
+    }
+    return args;
+  }, {});
+
+  const base = args.base;
   if (base === undefined) {
-    console.error("base 브랜치는 필수입니다.");
+    logError("base 브랜치는 필수입니다.");
     process.exit(1);
   }
   const linesThreshold = parseInt(
-    args[1] || process.env.CHECK_GIT_DIFF_LINE_THRESHOLD,
+    args.linesThreshold || process.env.CHECK_GIT_DIFF_LINE_THRESHOLD,
     10
   );
   if (Number.isNaN(linesThreshold)) {
-    console.error("라인 제한은 숫자 형식으로 입력하세요.");
+    logError("라인 제한은 숫자 형식으로 입력하세요.");
     process.exit(1);
   }
+  const debug = args.debug;
 
-  return { base, linesThreshold };
+  return { base, linesThreshold, debug };
 }
 
-async function main({ base, linesThreshold }) {
-  const changedFiles = await gitGitDiffByFiles({ baseBranch: base });
+async function main({ base, linesThreshold, debug }) {
+  const changedFiles = await gitGitDiffByFiles({ baseBranch: base, debug });
 
   const lineCount = changedFiles.reduce(
     (sum, { file, insertion, deletion }) => {
@@ -66,7 +79,7 @@ async function main({ base, linesThreshold }) {
  * @param {string} baseBranch
  * @returns {Promise<{ file: string, insertion: number, deletion: number }[]>}
  */
-async function gitGitDiffByFiles({ baseBranch }) {
+async function gitGitDiffByFiles({ baseBranch, debug }) {
   try {
     const result = await new Promise((resolve, reject) => {
       exec(`git diff --numstat ${baseBranch}`, (error, stdout) => {
@@ -78,17 +91,32 @@ async function gitGitDiffByFiles({ baseBranch }) {
       });
     });
 
+    const parseCount = (value) => {
+      const parsed = parseInt(value, 10);
+      if (Number.isNaN(parsed)) {
+        if (debug === true) {
+          logError(`Cannot parse ${value} as number`);
+        }
+        return undefined;
+      }
+      return parsed;
+    };
+
     return result
       .split("\n")
       .filter((line) => !!line)
       .map((line) => line.split("\t"))
       .map(([insertion, deletion, file]) => ({
         file,
-        insertion: parseInt(insertion, 10),
-        deletion: parseInt(deletion, 10),
-      }));
+        insertion: parseCount(insertion),
+        deletion: parseCount(deletion, 10),
+      }))
+      .filter(
+        ({ insertion, deletion }) =>
+          insertion !== undefined || deletion !== undefined
+      );
   } catch (error) {
-    console.error(error);
+    logError(error);
     return undefined;
   }
 }
@@ -127,6 +155,10 @@ const BGblue = "\x1b[44m";
 const BGmagenta = "\x1b[45m";
 const BGcyan = "\x1b[46m";
 const BGwhite = "\x1b[47m";
+
+function logError(message) {
+  console.error(`${red}${message}${reset}`);
+}
 
 function warn(message) {
   console.warn(`${yellow}${message}${reset}`);
