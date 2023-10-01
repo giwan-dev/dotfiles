@@ -51,7 +51,7 @@ function yield_port {
 }
 
 # base 브랜치로부터 변경 내역이 얼마나 많이 쌓였는지 확인하는 명령어
-function diff_with {
+function diffwith {
   export CHECK_GIT_DIFF_LINE_THRESHOLD=600
   "$HOME/dotfiles/scripts/check-git-diff.js" $1 $2
 }
