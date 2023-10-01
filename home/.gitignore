@@ -30,9 +30,6 @@ ehthumbs.db
 Icon?
 Thumbs.db
 
-# Editor files
-.vscode
-
 # Node.js package manager related
 /node_modules
 /npm-debug.log
