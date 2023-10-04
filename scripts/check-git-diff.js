@@ -48,6 +48,9 @@ function parseArguments() {
 
 async function main({ base, linesThreshold, debug }) {
   const changedFiles = await gitGitDiffByFiles({ baseBranch: base, debug });
+  if (changedFiles === undefined) {
+    return;
+  }
 
   const lineCount = changedFiles.reduce(
     (sum, { file, insertion, deletion }) => {
@@ -74,7 +77,7 @@ async function main({ base, linesThreshold, debug }) {
 /**
  * git diff --numstat을 실행하고 그 결과를 파일 단위 어레이로 파싱하는 함수
  * @param {string} baseBranch
- * @returns {Promise<{ file: string, insertion: number, deletion: number }[]>}
+ * @returns {Promise<{ file: string, insertion: number, deletion: number }[]> | undefined}
  */
 async function gitGitDiffByFiles({ baseBranch, debug }) {
   try {
