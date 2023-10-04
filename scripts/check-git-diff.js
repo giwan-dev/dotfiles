@@ -10,9 +10,6 @@ const { exec } = require("child_process");
 // TODO: glob으로 설정할 수 있도록 확장하기
 const IGNORING_FILES = ["package-lock.json"];
 
-const args = parseArguments();
-main(args);
-
 /**
  * 첫 번째 파라미터는 비교할 base 브랜치
  * 두 번째 파라미터는 최소 라인 변경 수
@@ -167,3 +164,6 @@ function warn(message) {
 function success(message) {
   console.log(`${green}${message}${reset}`);
 }
+
+const args = parseArguments();
+main(args);
