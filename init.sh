@@ -9,4 +9,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
 
   echo "Setting user defaults..."
   source "$ROOT_DIR/scripts/set-defaults.sh"
+
+  echo "Link key bindings..."
+  source "$ROOT_DIR/scripts/link-key-bindings.sh"
 fi
