@@ -16,6 +16,7 @@
   c = commit
   cf = c --no-verify # 커밋 훅을 작동시키지 않고 커밋합니다.
   override = commit --amend -C HEAD
+  fixup = commit --fixup
 
   d = diff
   dsum = d --compact-summary # 현재 변경 내역의 요약 정보를 확인합니다.
