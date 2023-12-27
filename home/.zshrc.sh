@@ -57,7 +57,7 @@ function diffwith {
 }
 
 # 현재 브랜치를 base로 하는 Pull Request 목록을 클립보드에 복사하는 명령어
-function copyPullRequests {
+function copy_pr {
   gh pr list \
     --state all \
     --json number \
