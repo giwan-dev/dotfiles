@@ -61,7 +61,7 @@
   excludesfile = ~/.gitignore
 
 [format]
-  pretty = %Cred%h%Creset%C(yellow)%d%Creset %C(blue)%an%Creset %C(dim)%cr\n%B
+  pretty = %C(dim)%h%Creset%C(yellow)%d%Creset %C(blue)%an%Creset %C(dim)%cr\n%C(dim)%h%Creset %B
 
 [log]
   abbrevCommit = true
