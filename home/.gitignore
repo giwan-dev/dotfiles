@@ -38,3 +38,5 @@ Thumbs.db
 *.bundle
 
 storybook-static
+home/.config/zed
+home/.config/gh
