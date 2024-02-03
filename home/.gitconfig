@@ -22,7 +22,7 @@ d = diff
 dsum = d --compact-summary # 현재 변경 내역의 요약 정보를 확인합니다.
 
 # log
-l = log --pretty='%C(auto)%s %h%Creset%n%b%C(dim)%an %cr%Creset%C(auto)%d%Creset'
+l = log --pretty='%w(0)%C(dim)%m %C(dim)%an, %cr%Creset%C(auto)%d%n%C(red)%m %C(auto)%h %<(80,mtrunc)%s%Creset%n%w(100, 2, 2)%-b%n'
 
 m = merge
 mc = m --continue
