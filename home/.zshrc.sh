@@ -9,8 +9,6 @@ source "$terminal/functions.sh"
 
 source "$HOME/dotfiles/scripts/add-to-dotfiles.sh"
 
-export BAT_THEME="Catppuccin-frappe"
-
 alias cl="clear"
 alias permission="sudo chown -R $USER"
 alias g="git"
