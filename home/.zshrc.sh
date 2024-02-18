@@ -10,7 +10,6 @@ source "$terminal/functions.sh"
 source "$HOME/dotfiles/scripts/add-to-dotfiles.sh"
 
 alias cl="clear"
-alias permission="sudo chown -R $USER"
 alias g="git"
 
 # Register directory
