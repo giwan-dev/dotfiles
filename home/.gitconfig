@@ -54,7 +54,7 @@ s = show --pretty='\
 m = merge
 mc = m --continue
 ma = m --abort
-pl = pull --all -pv
+pl = pull -p
 ps = push
 r = rebase
 rc = r --continue
