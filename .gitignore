@@ -3,3 +3,5 @@ home/.config/configstore
 home/.config/yarn
 
 Brewfiles/*.rb.lock.json
+
+company.gitconfig

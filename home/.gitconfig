@@ -98,3 +98,6 @@ user = giwan-dev
 navigate = true
 light = true
 line-numbers = true
+
+[include]
+path = ~/dotfiles/home/company.gitconfig
