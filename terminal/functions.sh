@@ -31,13 +31,20 @@ function diffwith {
   "$HOME/dotfiles/scripts/check-git-diff.js" $1 $2
 }
 
-# 현재 브랜치를 base로 하는 Pull Request 목록을 클립보드에 복사하는 명령어
+# 브랜치를 base로 하는 Pull Request 목록을 클립보드에 복사하는 명령어
 function copy_pr {
+  branch=$1
+  if [[ -z "$branch" ]]; then
+    branch=$(git rev-parse --abbrev-ref HEAD)
+  fi
+
+  echo "Base 브랜치: $branch"
+
   gh pr list \
     --state all \
     --json number \
     --jq "sort_by(.number) | .[].number" \
-    --base $(git rev-parse --abbrev-ref HEAD) |
+    --base $branch |
     sed 's/^/- #/' |
     pbcopy
 }
