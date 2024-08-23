@@ -11,6 +11,7 @@ source "$HOME/dotfiles/scripts/add-to-dotfiles.sh"
 
 alias cl="clear"
 alias g="git"
+alias pn="pnpm"
 
 # Register directory
 hash -d dev="$dev"
