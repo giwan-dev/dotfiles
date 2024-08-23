@@ -48,3 +48,8 @@ function copy_pr {
     sed 's/^/- #/' |
     pbcopy
 }
+
+# 현재 IP를 출력
+function my_ip {
+  ifconfig | grep inet | grep -v 127.0.0.1 | grep -v inet6 | awk '{ print $2 }'
+}
