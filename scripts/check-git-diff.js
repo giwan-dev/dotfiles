@@ -34,7 +34,7 @@ const BGcyan = "\x1b[46m";
 const BGwhite = "\x1b[47m";
 
 // TODO: glob으로 설정할 수 있도록 확장하기
-const IGNORING_FILES = ["package-lock.json"];
+const IGNORING_FILES = ["package-lock.json", "pnpm-lock.yaml"];
 
 /**
  * 첫 번째 파라미터는 비교할 base 브랜치
