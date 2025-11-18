@@ -27,7 +27,7 @@
 # OS generated files
 .DS_Store*
 ehthumbs.db
-Icon?
+# Icon?
 Thumbs.db
 
 # Node.js package manager related
@@ -40,3 +40,6 @@ Thumbs.db
 storybook-static
 home/.config/zed
 home/.config/gh
+
+home/.config/simple-update-notifier
+home/.config/fontforge
