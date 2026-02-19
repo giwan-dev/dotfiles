@@ -32,9 +32,9 @@ rebase = true
 default = simple
 
 [alias]
-cFORCE = c --no-verify
-psFORCE = ps --force-with-lease
-unstage = restore -S
+  cFORCE = c --no-verify
+  psFORCE = ps --force-with-lease
+  unstage = restore -S
   wt = worktree
 
 a = add
