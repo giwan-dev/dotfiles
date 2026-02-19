@@ -6,7 +6,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
 fi
 
 dev="$HOME/Developer"
-
 terminal="$HOME/dotfiles/terminal"
 source "$terminal/highlight/setup.sh"
 source "$terminal/completion/setup.sh"
@@ -19,6 +18,7 @@ alias g="git"
 alias pn="pnpm"
 
 # Register directory
+dev="$HOME/Developer"
 hash -d dev="$dev"
 
 # nvm configurations
@@ -26,6 +26,5 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
-# Created by `pipx` on 2024-02-25 08:24:25
-export PATH="$PATH:/Users/giwan/.local/bin"
+[[ -f "$HOME/dotfiles/home/company.zshrc.sh" ]] && source "$HOME/dotfiles/home/company.zshrc.sh"
 

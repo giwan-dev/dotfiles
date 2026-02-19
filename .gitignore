@@ -1,6 +1,7 @@
 home/.config/iterm2/AppSupport
 home/.config/configstore
 home/.config/yarn
+home/company.zshrc.sh
 
 Brewfiles/*.rb.lock.json
 
