@@ -43,3 +43,10 @@ home/.config/gh
 
 home/.config/simple-update-notifier
 home/.config/fontforge
+
+# private cursor config
+.cursor/worktrees.json
+.cursor/plans
+
+.pnpm-store
+
