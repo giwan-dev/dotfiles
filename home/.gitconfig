@@ -35,6 +35,7 @@ default = simple
 cFORCE = c --no-verify
 psFORCE = ps --force-with-lease
 unstage = restore -S
+  wt = worktree
 
 a = add
 b = branch
