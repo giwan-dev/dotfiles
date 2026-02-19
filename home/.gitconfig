@@ -33,7 +33,7 @@ default = simple
 
 [alias]
 cFORCE = c --no-verify
-psFORCE = ps -f
+psFORCE = ps --force-with-lease
 unstage = restore -S
 
 a = add
