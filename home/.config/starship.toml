@@ -1,2 +1,22 @@
+format = """${custom.worktree}\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$all"""
+
+[custom.worktree]
+command = '''
+git_common=$(cd "$(git rev-parse --git-common-dir 2>/dev/null)" && pwd)
+git_dir=$(cd "$(git rev-parse --git-dir 2>/dev/null)" && pwd)
+if [ "$git_common" != "$git_dir" ]; then
+  basename "$(dirname "$git_common")"
+fi
+'''
+when = 'test "$(cd "$(git rev-parse --git-common-dir 2>/dev/null)" && pwd)" != "$(cd "$(git rev-parse --git-dir 2>/dev/null)" && pwd)"'
+format = "[$output:]($style)"
+style = "bold cyan"
+
 [nodejs]
 symbol = "node "
