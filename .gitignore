@@ -1,6 +1,16 @@
 home/.config/iterm2/AppSupport
 home/.config/configstore
 home/.config/yarn
+home/.config/mole
+home/.config/1Password
+home/.config/git
+home/.config/uv
+home/.config/zed
+home/.config/gh
+home/.config/simple-update-notifier
+home/.config/fontforge
+home/1Password
+
 home/company.zshrc.sh
 
 Brewfiles/*.rb.lock.json

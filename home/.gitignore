@@ -38,15 +38,10 @@ Thumbs.db
 *.bundle
 
 storybook-static
-home/.config/zed
-home/.config/gh
-
-home/.config/simple-update-notifier
-home/.config/fontforge
-
-# private cursor config
-.cursor/worktrees.json
-.cursor/plans
 
 .pnpm-store
+
+# Claude
+.claude/worktrees
+.claude/settings.local.json
 
