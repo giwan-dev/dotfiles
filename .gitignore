@@ -9,6 +9,7 @@ home/.config/zed
 home/.config/gh
 home/.config/simple-update-notifier
 home/.config/fontforge
+home/.config/tfenv
 home/1Password
 
 home/company.zshrc.sh
