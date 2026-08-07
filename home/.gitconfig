@@ -2,6 +2,7 @@
 editor = vim
 excludesfile = ~/.gitignore
 pager = delta
+	commentChar = ";"
 
 [init]
 defaultBranch = main
