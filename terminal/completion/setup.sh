@@ -1,6 +1,8 @@
 fpath=("${0:h}/source/src" $fpath)
 
-autoload -Uz compinit && compinit -i
+# -C: skip the check for new completion functions and reuse the dump file.
+# Run `rm ~/.zcompdump && compinit` after installing a tool whose completions are missing.
+autoload -Uz compinit && compinit -C -i
 
 #
 # Options
