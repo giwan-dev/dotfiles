@@ -13,6 +13,7 @@ home/.config/tfenv
 home/1Password
 
 home/company.zshrc.sh
+home/local.zshenv.sh
 
 Brewfiles/*.rb.lock.json
 
