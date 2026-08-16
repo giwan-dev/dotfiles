@@ -47,6 +47,6 @@ hash -d dev="$dev"
 # AI Agent 비용 최적화를 위해 최대 라인수 제한
 export BASH_MAX_OUTPUT_LENGTH=15000
 
-# 인증 토큰 설정
-export GITHUB_PAT=$(security find-generic-password -a "$USER" -s "GITHUB_PAT" -w)
-export NODE_AUTH_TOKEN=$GITHUB_PAT
+# 인증 토큰 설정 (회사 환경에서만 사용)
+# export GITHUB_PAT=$(security find-generic-password -a "$USER" -s "GITHUB_PAT" -w)
+# export NODE_AUTH_TOKEN=$GITHUB_PAT
